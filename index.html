@@ -7,8 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <title>Video Player</title>
-    <!-- S-Tech04 -->
-    <!-- www.youtube.com/c/STech04 -->
+   
 </head>
 <body>
     <section>
@@ -77,7 +76,22 @@
         </div>
     </section>
 
-    
+    <script>
+var URL = window.location.href;
+
+var URLsplit = URL.split('?');
+
+var newURL = URLsplit[1];
+
+var video = document.getElementById('video_player');
+var source = document.getElementById('main-video');
+
+source.setAttribute('src', newURL);
+
+video.load();
+video.play();
+
+</script>
 
     <script src="./script.js"></script>
 </body>
