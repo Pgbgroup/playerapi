@@ -79,14 +79,18 @@
     <script>
 var URL = window.location.href;
 
-var URLsplit = URL.split('?');
+var URLsplit = URL.split('/');
 
-var newURL = URLsplit[1];
+var dk = URLsplit[4];
+        
+var b=dk.split("?");
 
+var c=b[1];
+        
 var video = document.getElementById('video_player');
 var source = document.getElementById('main-video');
 
-source.setAttribute('src', newURL);
+source.setAttribute('src', c);
 
 video.load();
 video.play();
